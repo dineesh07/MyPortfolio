@@ -1,12 +1,13 @@
-export default function ProjectDetail({
-  params,
-}: { 
-  params: { id: string };
-}) {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Project Detail for {params.id}</h1>
-    </main>
-  );
+type PageProps = {
+  params: Promise<{ id: string }>
 }
 
+export default async function Page({ params }: PageProps) {
+  const { id } = await params
+
+  return (
+    <div>
+      {id}
+    </div>
+  )
+}
