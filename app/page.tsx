@@ -18,10 +18,9 @@ const socialLinks = [
 ];
 
 const roles = [
-  "Creative Web Developer",
+  "Full-Stack Developer",
   "UI/UX Designer",
   "AI Tools Enthusiast",
-  "Video Editor"
 ];
 
 const RotatingRoles = () => {
@@ -121,7 +120,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen p-8 pt-32 max-w-7xl mx-auto">
+    <main className="min-h-screen p-8 pt-32 max-w-[1440px] mx-auto">
       <section id="home" className="mb-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 items-center mt-16">
           {/* Left Side - Text Content */}

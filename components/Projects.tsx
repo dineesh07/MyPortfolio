@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FiArrowUpRight, FiVideo } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
 
 interface ProjectCardProps {
   title: string;
@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
       {link !== "#" && (
         <Link href={link} target="_blank" rel="noopener noreferrer" className="mt-6 flex items-center justify-between text-violet-500 hover:text-violet-400 transition-colors group">
-          <span className="text-lg font-semibold">{title === "Video Archives" ? "Watch Videos" : "View Project"}</span>
+          <span className="text-lg font-semibold">View Project</span>
           <motion.div
             className="text-2xl group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200 relative"
             whileHover={{ scale: 1.2 }}
@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            {title === "Video Archives" ? <FiVideo className="relative z-10" /> : <FiArrowUpRight className="relative z-10" />}
+            <FiArrowUpRight className="relative z-10" />
           </motion.div>
         </Link>
       )}
@@ -59,10 +59,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
 const projectData = [
   {
-    title: "GlobeTrotter",
-    oneLiner: "Built a lightweight travel planning web application that enables users to create personalized multi-city itineraries, manage activities and budgets, visualize trip timelines, and share travel plans—making trip planning intuitive, efficient, and engaging.",
-    techStack: ["Web App", "Travel"],
-    challenge: "Making trip planning intuitive and efficient.",
+    title: "Students Club Engagement and Management System (SCEMS)",
+    oneLiner: "Developed a comprehensive activity management platform with multi-tiered administrative approval workflows and automated OD (On-Duty) certificate generation, integrating dynamic team registration and SAP point tracking to eliminate manual processing overhead.",
+    techStack: ["Workflow Automation", "Academic Admin"],
+    challenge: "Streamlining multi-level administrative approvals.",
     link: "#",
   },
   {
@@ -73,10 +73,10 @@ const projectData = [
     link: "#",
   },
   {
-    title: "College Event Management System",
-    oneLiner: "Developed an event management system with dynamic group registration forms and automated fee calculation, generating custom payment QR codes to ensure accurate billing and eliminate manual errors.",
-    techStack: ["Event Mgmt", "Payments"],
-    challenge: " eliminating manual billing errors.",
+    title: "Procura: Integrated Manufacturing ERP & Production Control",
+    oneLiner: "Created a role-based manufacturing platform that unifies workflows from order intake to delivery, automating inventory reorder predictions and cost variance analysis to eliminate financial leaks and production delays.",
+    techStack: ["Industrial Tech", "Logistics & Inventory Automation"],
+    challenge: "Replacing fragmented, manual communication with a unified system that accurately predicts reorder levels and identifies real-time cost variances.",
     link: "#",
   },
   {
@@ -94,10 +94,11 @@ const projectData = [
     link: "#",
   },
   {
-    title: "Video Archives",
-    oneLiner: "A curated collection of my video editing work, featuring visual storytelling, dynamic cuts, and motion graphics. Explore my Drive folder to see my edited projects.",
-    techStack: ["Video Editing", "Visuals"],
-    link: "https://drive.google.com/drive/folders/1QYhNLWdX5u45NvvGxzzTPbbAYBy9gBhu?usp=drive_link",
+    title: "GlobeTrotter",
+    oneLiner: "Built a lightweight travel planning web application that enables users to create personalized multi-city itineraries, manage activities and budgets, visualize trip timelines, and share travel plans—making trip planning intuitive, efficient, and engaging.",
+    techStack: ["Web App", "Travel"],
+    challenge: "Making trip planning intuitive and efficient.",
+    link: "#",
   },
 ];
 

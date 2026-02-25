@@ -92,6 +92,22 @@ const achievementsData: AchievementCardProps[] = [
     },
   },
   {
+    title: "1st Prize – Hackwave 3.0.2",
+    description: "1st prize winner in \"Hackwave 3.0.2\" 2026, an internal departmental hackathon focused on innovative software solutions.",
+    mainBadge: "1st Prize",
+    subBadge: "Hackathon",
+    year: "2026",
+    icon: <FaTrophy />,
+    colors: {
+      iconBg: "bg-amber-100 dark:bg-amber-900/30",
+      iconColor: "text-amber-600 dark:text-amber-400",
+      mainBadgeBg: "bg-amber-500",
+      subBadgeBg: "bg-amber-100 dark:bg-amber-900/30",
+      subBadgeText: "text-amber-700 dark:text-amber-300",
+      accentBorder: "bg-amber-500",
+    },
+  },
+  {
     title: "3rd Prize – BIT Hackathon Season 2",
     description: "Won third place in the full-stack development domain at BIT Hackathon Season 2, a inter-college competition.",
     mainBadge: "3rd Prize",

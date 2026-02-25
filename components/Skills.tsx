@@ -4,7 +4,7 @@ import {
     SiNextdotjs, SiTailwindcss, SiTypescript, SiReact,
     SiFlutter, SiN8N, SiFigma,
     SiHtml5, SiCss3, SiJavascript, SiGit, SiFirebase, SiMysql, SiCanva,
-    SiC, SiCplusplus, SiPython
+    SiC, SiCplusplus, SiPython, SiPostgresql
 } from "react-icons/si";
 import Image from "next/image";
 
@@ -26,7 +26,13 @@ const skillCategories = [
         title: "Backend Technologies",
         className: "col-span-1",
         skills: [
-            { name: "SQL", icon: <SiMysql size={32} />, color: "text-blue-600" },
+            { name: "MySQL", icon: <SiMysql size={32} />, color: "text-blue-600" },
+            { name: "PostgreSQL", icon: <SiPostgresql size={32} />, color: "text-blue-400" },
+            {
+                name: "Neon (Postgres)",
+                icon: <Image src="/neon.png" alt="Neon" width={32} height={32} className="w-8 h-8 rounded-md" />,
+                color: "text-emerald-400"
+            },
             { name: "Firebase", icon: <SiFirebase size={32} />, color: "text-yellow-500" },
         ]
     },
@@ -53,11 +59,6 @@ const skillCategories = [
         skills: [
             { name: "Figma", icon: <SiFigma size={32} />, color: "text-purple-400" },
             { name: "Canva", icon: <SiCanva size={32} />, color: "text-blue-500" },
-            {
-                name: "CapCut",
-                icon: <Image src="/capcut.png" alt="CapCut" width={32} height={32} className="w-8 h-8 rounded-md" />,
-                color: "text-white"
-            },
         ]
     }
 ];
@@ -74,7 +75,7 @@ const Skills = () => {
                 Skills
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-24">
                 {skillCategories.map((category, catIndex) => (
                     <div key={category.title} className={category.className}>
                         <motion.h3
@@ -85,7 +86,7 @@ const Skills = () => {
                         >
                             {category.title}
                         </motion.h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                             {category.skills.map((skill, index) => (
                                 <motion.div
                                     key={skill.name}

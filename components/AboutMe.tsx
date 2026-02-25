@@ -10,7 +10,7 @@ const AboutMe = () => {
         About Me
       </motion.h2>
       <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-xl md:text-2xl opacity-80 leading-relaxed max-w-none mb-12 text-justify">
-        I’m <span className="text-violet-500 font-bold">Dineesh M</span>, a Web Developer & UI/UX Designer currently pursuing my Master’s in Software Systems with a <span className="text-violet-500 font-bold">9.50 CGPA</span>. I focus on building visually clean, user-friendly digital experiences that feel smooth, intuitive, and well thought out, while constantly exploring AI tools to enhance both creativity and efficiency.
+        I’m <span className="text-violet-500 font-bold">Dineesh M</span>, a Full-Stack Developer & UI/UX Designer currently pursuing my Master’s in Software Systems with a <span className="text-violet-500 font-bold">9.47 CGPA</span>. I focus on building visually clean, user-friendly digital experiences that feel smooth, intuitive, and well thought out, while constantly exploring AI tools to enhance both creativity and efficiency.
         <br /><br />
         I love building things that just make sense from refined UI details to seamless user flows. I adapt quickly to new technologies, experiment with AI, and use video editing as another creative outlet to bring ideas to life. <span className="text-violet-500 font-bold">Learning, evolving, and raising the bar with every project.</span>
       </motion.p>
@@ -49,7 +49,7 @@ const AboutMe = () => {
             <Layers size={24} />
           </div>
           <h3 className="text-xl font-bold text-black dark:text-white mb-1">Projects Built</h3>
-          <p className="text-xl font-normal opacity-80">7+</p>
+          <p className="text-xl font-normal opacity-80">9+</p>
         </motion.div>
 
         <motion.div
