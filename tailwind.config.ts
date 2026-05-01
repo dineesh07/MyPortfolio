@@ -15,7 +15,11 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         },
       fontFamily: {
-        rillosta: ["Rillosta", "serif !important"], // Add this line
+        rillosta: ["Rillosta", "serif !important"],
+        poppins: ["var(--font-poppins)", "sans-serif"],
+      },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
       },
     },
   },

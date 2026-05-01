@@ -76,7 +76,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
 
 const achievementsData: AchievementCardProps[] = [
   {
-    title: "Department Coding Club – Joint Secretary",
+    title: "Department Coding Club – Joint Secretary (2025-26)",
     description: "Elected as Joint Secretary of the department coding club, coordinating technical events, supporting administrative planning, managing communications, and assisting in organizing coding activities and workshops in collaboration with the core team.",
     mainBadge: "Leadership Role",
     subBadge: "Leadership",
@@ -89,6 +89,22 @@ const achievementsData: AchievementCardProps[] = [
       subBadgeBg: "bg-violet-100 dark:bg-violet-900/30",
       subBadgeText: "text-violet-700 dark:text-violet-300",
       accentBorder: "bg-violet-500",
+    },
+  },
+  {
+    title: "Academic Excellence Award-2026",
+    description: "Received the Academic Excellence Award for maintaining an exceptional CGPA and demonstrating outstanding scholastic performance, accompanied by a merit scholarship and formal institutional recognition.",
+    mainBadge: "Scholarship",
+    subBadge: "Academic",
+    year: "2026",
+    icon: <FaStar />,
+    colors: {
+      iconBg: "bg-emerald-100 dark:bg-emerald-900/30",
+      iconColor: "text-emerald-600 dark:text-emerald-400",
+      mainBadgeBg: "bg-emerald-500",
+      subBadgeBg: "bg-emerald-100 dark:bg-emerald-900/30",
+      subBadgeText: "text-emerald-700 dark:text-emerald-300",
+      accentBorder: "bg-emerald-500",
     },
   },
   {
@@ -175,7 +191,7 @@ const achievementsData: AchievementCardProps[] = [
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="mb-24 pt-16">
+    <section id="achievements" className="mb-24 pt-24 scroll-mt-24">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

@@ -9,6 +9,8 @@ import Projects from "../components/Projects";
 import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import BorderGlow from "../components/BorderGlow";
+import LinkedInActivity from "../components/LinkedInActivity";
 
 const socialLinks = [
   { icon: <FiGithub />, href: "https://github.com/dineesh07", label: "GitHub" },
@@ -120,9 +122,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen p-8 pt-32 max-w-[1440px] mx-auto">
-      <section id="home" className="mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 items-center mt-16">
+    <main className="min-h-screen p-8 pt-32 max-w-[1440px] mx-auto relative">
+      <section id="home" className="mb-24 relative min-h-[80vh] flex items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 items-center mt-16 w-full">
           {/* Left Side - Text Content */}
           <div>
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-4 font-bold leading-tight text-5xl md:text-6xl lg:text-7xl">
@@ -156,18 +158,28 @@ export default function Home() {
             className="relative flex justify-center lg:justify-end lg:translate-x-12"
           >
             <div className="relative w-full max-w-md lg:max-w-lg">
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-200/30 to-violet-300/20 rounded-3xl blur-2xl -z-10" />
-              <div className="relative rounded-3xl overflow-hidden border border-neutral-200 shadow-xl">
-                <img
-                  src="/profile-updated.jpg"
-                  alt="Dineesh M"
-                  className="w-full h-auto object-cover"
-                  onError={(e) => {
-                    // Fallback if image doesn't exist yet
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-              </div>
+              <BorderGlow
+                edgeSensitivity={30}
+                glowColor="40 80 80"
+                backgroundColor="transparent"
+                borderRadius={32}
+                glowRadius={40}
+                glowIntensity={1.0}
+                coneSpread={25}
+                animated={false}
+                colors={['#c084fc', '#f472b6', '#38bdf8']}
+              >
+                <div className="relative w-full h-full rounded-[32px] overflow-hidden shadow-xl bg-white dark:bg-neutral-900">
+                  <img
+                    src="/profile-updated.jpg"
+                    alt="Dineesh M"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                </div>
+              </BorderGlow>
             </div>
           </motion.div>
         </div>
@@ -180,6 +192,7 @@ export default function Home() {
       <Projects />
 
       <Achievements />
+      <LinkedInActivity />
 
       <Contact />
       <Footer />
